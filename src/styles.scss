@@ -1,0 +1,118 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: rgba(0,0,0,.05);
+  margin-top: 100px;
+}
+
+ol, ul {
+ li {
+   margin-bottom: 10px; 
+   line-height: 1.5;
+ }
+}
+
+.Nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  padding: 1rem;
+  background-color: #ffffff;
+  border-bottom: 1px solid rgba(0,0,0,.2);
+
+  button {
+    margin-left: auto;
+  }
+}
+
+.Code {
+  font-family: monospace;
+  color: red;
+  background-color: lightgray;
+  border-radius: 3px;
+  padding: 2px 5px;
+}
+
+.Banner {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  left: 1rem;
+  padding: 1rem;
+  text-align: center;
+
+  &--success {
+    background-color: darkseagreen;
+    border: 1px solid darken(darkseagreen, 30%);
+    color: darken(darkseagreen, 60%);
+  }
+  
+  &--danger {
+    background-color: lightcoral;
+    border: 1px solid darken(lightcoral, 30%);
+    color: darken(lightcoral, 60%);
+  }
+
+  &Close {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    cursor: pointer;
+  }
+}
+
+.Button {
+  padding: .5rem 1rem;
+  background-color: lightgrey;
+  border: 1px solid darken(lightgrey, 30%);
+  color: darken(lightgrey, 70%);
+  border-radius: 3px;
+  cursor: pointer;
+  
+  &:hover {
+    background-color: darken(lightgrey, 5%);
+  }
+  
+  &--primary {
+    background-color: lightsalmon;
+    border: 1px solid darken(lightsalmon, 30%);
+    color: darken(lightsalmon, 60%);
+    
+    &:hover {
+      background-color: darken(lightsalmon, 5%);
+    }
+  }
+  
+}
+
+.Modal {
+  &Body, &:before {
+    position: absolute;
+    z-index: 9999;
+  }
+
+  &:before {
+    content: '';
+    inset: 0;
+    background: rgba(0,0,0,.9);
+  }
+
+  &Body {
+    display: flex;
+    flex-direction: column;
+    inset: 3rem;
+    background-color: #ffffff;
+    padding: 1rem;
+  }
+  
+  &Footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: auto;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(0,0,0,.2);
+  }
+}
